@@ -14,13 +14,14 @@ int main() {
 	int min = get_int("Min: ");
 	int max = get_int("Max: ");
 	int total_rounds = get_int("Tatal rounds: ");
+	printf("\n");
 
 	int score = 0;
 
 	for (int i=0; i<total_rounds; i++) {
 		int num1 = randNum(min, max);
 		int num2 = randNum(min, max);
-		int userInput = get_int("%d> %d + %d = ", i+1, num1, num2);
+		int userInput = get_int("(%d) %d + %d = ", i+1, num1, num2);
 		if (userInput == num1 + num2) {
 			printf("Correct!\n");
 			score++;
@@ -29,7 +30,7 @@ int main() {
 			printf("Incorrect! Answer: %d\n", num1 + num2);
 		}
 	}
-	printf("Game over! Your score: %d\n", score);
+	printf("\nGame over! Your score: %d\n\n", score);
 	return 0;
 }
 

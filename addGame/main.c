@@ -29,7 +29,7 @@ int main() {
 			printf("Incorrect! Answer: %d\n", num1 + num2);
 		}
 	}
-	printf("Game over! Your score: %d\n", score)
+	printf("Game over! Your score: %d\n", score);
 	return 0;
 }
 

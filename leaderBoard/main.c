@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 typedef struct {
@@ -20,9 +21,19 @@ int main() {
     sortPlayers(guild, size);
 
     for (int i = 0; i < size; i++) {
-        printf("Name: %s, Level: %d\n", guild[i].name, guild[i].level);
+        printf("Name: %s\tLevel: %d\n", guild[i].name, guild[i].level);
     }
     return 0;
 }
 
-void sortPlayers(Player arr[], int size) { return; }
+void sortPlayers(Player arr[], int size) {
+    for (int x = 0; x < (size - 1); x++) {
+        for (int i = 0; i < (size - x - 1); i++) {
+            if (arr[i].level > arr[i + 1].level) {
+                Player tmp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = tmp;
+            }
+        }
+    }
+}

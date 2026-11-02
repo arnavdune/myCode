@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 typedef struct {
-    char name[50];
+    char name[20];
     int level;
 } Player;
 
